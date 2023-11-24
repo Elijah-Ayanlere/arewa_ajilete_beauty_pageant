@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffcccb, #ffd700);
+}
+
+.beige {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    text-align: center;
+    color: #4a148c;
+    top: 10px;
+}
+
+#txt{
+    font-size: 30px;
+    font-weight: 600
+}
+
+.display {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+    width: 18rem;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #ffb6c1, #ffd700);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.card-title {
+    position: relative;
+    text-align: center;
+    color: #4a148c;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    position: relative;
+    margin: 10px;
+    background: linear-gradient(to right, #ffb6c1, #ffd700);
+    color: #4a148c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ffb6c1, #ffd700);
+}
+
+.vote {
+    position: relative;
+    margin-bottom: 10px;
+    color: #ff65a3;
+    font-size: 1.2rem;
+}
+
+#totalVotes {
+    position: relative;
+    text-align: center;
+    top: 50px;
+    color: #4a148c;
+    font-weight: 500;
+}
+
+footer {
+    position: relative;
+    color: #4a148c;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    top: 100px;
+}
+
+@media (max-width: 768px) {
+    .beige {
+        padding: 1rem;
+    }
+
+    .display {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    footer {
+        top: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beige {
+        padding: 0.5rem;
+    }
+
+    .display {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    footer {
+        top: 200px;
+    }
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    to {
+        transform: translateX(100%);
+    }
+}
